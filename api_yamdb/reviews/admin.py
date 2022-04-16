@@ -1,7 +1,7 @@
+from .models import User, Comments, Review, Category, Genre, Title
+
 from django.conf import settings
 from django.contrib import admin
-
-from .models import User, Comments, Review, Category, Genre, Title
 
 
 @admin.register(User)
@@ -18,7 +18,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 
 @admin.register(Review)
-class CommentAdmin(admin.ModelAdmin):
+class CommentAdminReview(admin.ModelAdmin):
     list_display = ('pk', 'text', 'author', 'score', 'pub_date',)
     search_fields = ('text',)
     empty_value_display = settings.EMPTY_VALUE_DISPLAY
