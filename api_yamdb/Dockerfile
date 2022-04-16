@@ -8,6 +8,4 @@ RUN pip3 install -r requirements.txt --no-cache-dir
 
 COPY api_yamdb/ /app
 
-COPY infra/fixtures.json /app
-
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
