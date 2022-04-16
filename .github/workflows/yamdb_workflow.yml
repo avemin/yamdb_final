@@ -52,4 +52,4 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: avemin/infra_ыз2:latest 
+          tags: avemin/infra_sp2:latest 
