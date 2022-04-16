@@ -1,40 +1,25 @@
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
-from django_filters.rest_framework import DjangoFilterBackend
 from django.shortcuts import get_object_or_404
-
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
-from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import (AllowAny,
-                                        IsAuthenticated,
+from rest_framework.permissions import (AllowAny, IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
+from reviews.models import Category, Comments, Genre, Review, Title, User
 
-from reviews.models import (User,
-                            Comments,
-                            Title,
-                            Review,
-                            Category,
-                            Genre,
-                            Title)
-
-from .serializers import (SignupSerializer,
-                          TokenSerializer,
-                          UserSerializer,
-                          CommentsSerializer,
-                          ReviewSerializer,
-                          CategorySerializer,
-                          GenreSerializer,
-                          TitlePOSTSerializer,
-                          TitleGETSerializer)
-from .permissions import IsAdmin, IsAuthorOrStaff, IsAdminOrReadOnly
-from .utils import get_tokens
 from .filters import TitleFilter
 from .mixins import CreateListDestroyViewSet
-
+from .permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrStaff
+from .serializers import (CategorySerializer, CommentsSerializer,
+                          GenreSerializer, ReviewSerializer, SignupSerializer,
+                          TitleGETSerializer, TitlePOSTSerializer,
+                          TokenSerializer, UserSerializer)
+from .utils import get_tokens
 
 USER_ERROR = 'Пользователь с таким email уже существует!'
 CODE_INFO = 'Код подтверждения отправлен на Ваш email!'

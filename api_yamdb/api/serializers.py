@@ -1,11 +1,9 @@
 import datetime
 
 from django.db.models import Avg
-
 from rest_framework import serializers, validators
 from rest_framework.serializers import ModelSerializer
-
-from reviews.models import User, Comments, Review, Category, Genre, Title
+from reviews.models import Category, Comments, Genre, Review, Title, User
 
 
 class UserSerializer(ModelSerializer):
