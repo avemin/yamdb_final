@@ -1,4 +1,4 @@
-# yamdb_final ![example workflow](https://github.com/avemin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+# yamdb_final ![example workflow](https://github.com/avemin/yamdb_final/actions/workflows/yamdb_workflow/badge.svg)
 
 ## **Описание**
 Проект Yamdb_final это готовый к запуску на любом компьютере 
