@@ -10,7 +10,9 @@ services:
     env_file:
       - ./.env
   web:
-    image: avemin/yamdb_final:latest
+    build:
+      context: ../
+      image: avemin/yamdb_final:latest
 
 
     restart: always
