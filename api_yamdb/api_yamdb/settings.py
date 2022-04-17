@@ -11,7 +11,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'web', '51.250.103.30']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'web', '51.250.103.30','*']
 
 AUTH_USER_MODEL = 'reviews.User'
 
