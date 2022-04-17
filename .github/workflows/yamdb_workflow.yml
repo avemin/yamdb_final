@@ -69,7 +69,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub1
-          sudo docker pull avemin/yamdb_final
+          sudo docker pull avemin/api_yamdb
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 avemin/yamdb_final
+          sudo docker run --rm -d -p 5000:5000 avemin/api_yamdb
