@@ -1,7 +1,7 @@
 # Yamdb_final ![example workflow](https://github.com/avemin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## **Описание**
-Проект Infra_sp2 это готовый к запуску на любом компьютере 
+Проект Yamdb_final это готовый к запуску на любом компьютере 
 проект YaMDb ко корый собирает отзывы пользователей на различные произведения.
 
 **Технологи:**
@@ -10,17 +10,9 @@
 
 ### Как запустить проект:
 
-Клонировать репозиторий и перейти в каталог infra:
-```
-git clone https://github.com/avemin/infra_sp2.git
-```
-```
-cd infra_sp2/infra
-```
-Cобираем и запускаем контейнеры проекта:
-```
-sudo docker-compose up -d --build
-```
+Проект доступен по адресу:
+http://51.250.103.30/admin
+
 Выполняем миграции в две команды:
 ```
 sudo docker-compose exec web python3 manage.py migrate auth
@@ -49,6 +41,10 @@ POSTGRES_PASSWORD=password # пароль для подключения к БД 
 DB_HOST=db # название сервиса (контейнера)
 DB_PORT=5432 # порт для подключения к БД
 SECRET_KEY = 'asdfghjkk1234565' # ваш секретный ключик 
+
+## Об авторе:
+Автором данного проекта является студент 6 когорты курса python developer+ 
+avemin, ссылка на гитхаб https://github.com/avemin/
 
 ## Примеры:
 ### Пример POST-запроса, получить код подтверждения на переданный email.
